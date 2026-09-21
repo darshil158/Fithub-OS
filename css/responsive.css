@@ -1,0 +1,253 @@
+/* ============================================================
+   FitHub OS — Responsive Stylesheet (320px to 1440px+)
+   ============================================================ */
+
+/* ---------- Large Displays (1440px+) ---------- */
+@media (min-width: 1440px) {
+  .page-content {
+    padding: 32px;
+  }
+  .chart-container {
+    height: 320px;
+  }
+}
+
+/* ---------- Desktops / Laptops (1024px - 1280px) ---------- */
+@media (max-width: 1280px) {
+  .sidebar {
+    width: 240px;
+  }
+  .main-content {
+    margin-left: 240px;
+  }
+}
+
+/* ---------- Tablets & Small Laptops (992px and below) ---------- */
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 260px;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 1039;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-overlay.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .topbar .btn-menu {
+    display: block;
+  }
+
+  .topbar-user-info {
+    display: none;
+  }
+
+  .page-content {
+    padding: 16px;
+  }
+
+  .page-header h1 {
+    font-size: 19px;
+  }
+
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .table-toolbar .search-box {
+    min-width: 100%;
+  }
+
+  .filter-bar {
+    width: 100%;
+  }
+
+  .filter-bar .form-select,
+  .filter-bar .form-control {
+    max-width: none;
+    flex: 1;
+  }
+
+  .gym-selector, #branchSelector {
+    max-width: 140px;
+    font-size: 12px;
+  }
+}
+
+/* ---------- Medium Tablets & Large Mobiles (768px and below) ---------- */
+@media (max-width: 767.98px) {
+  .topbar-right {
+    gap: 8px;
+  }
+
+  .topbar-right select {
+    font-size: 11px !important;
+    padding: 3px 6px !important;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .page-header .d-flex {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .kpi-card {
+    margin-bottom: 8px;
+  }
+
+  .kpi-card .kpi-value {
+    font-size: 24px;
+  }
+
+  .chart-container {
+    height: 240px;
+  }
+}
+
+/* ---------- Mobile Phones (576px and below) ---------- */
+@media (max-width: 575.98px) {
+  .topbar {
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .topbar .breadcrumb {
+    display: none;
+  }
+
+  .gym-selector {
+    display: none !important;
+  }
+
+  .login-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .kpi-card .kpi-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .kpi-card .kpi-value {
+    font-size: 20px;
+  }
+
+  .chart-container {
+    height: 210px;
+  }
+
+  .btn {
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+
+  .modal-dialog {
+    margin: 8px;
+  }
+
+  .modal-content {
+    border-radius: 12px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .table-responsive {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table thead th, .table tbody td {
+    padding: 10px 12px;
+  }
+}
+
+/* ---------- Compact Mobiles (375px and below) ---------- */
+@media (max-width: 425px) {
+  .page-content {
+    padding: 12px 10px;
+  }
+
+  .page-header h1 {
+    font-size: 17px;
+  }
+
+  .table-toolbar {
+    padding: 12px;
+  }
+
+  .kpi-card .kpi-value {
+    font-size: 18px;
+  }
+
+  .quick-action-btn {
+    padding: 12px;
+  }
+
+  .quick-action-btn i {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Ultra-compact Mobiles (320px) ---------- */
+@media (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+
+  .topbar-right {
+    gap: 4px;
+  }
+
+  #topbarCurrency {
+    min-width: 60px !important;
+    font-size: 10.5px !important;
+  }
+
+  .page-header .btn {
+    width: 100%;
+  }
+
+  .login-card {
+    padding: 20px 14px;
+  }
+
+  .login-logo h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FitHub OS — Production-grade Multi-Gym Management SaaS built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap 5.">
+  <title>FitHub OS — Multi-Gym Management SaaS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/components.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #1a1d23 0%, #2d323b 50%, #1a1d23 100%);
+      color: #ffffff;
+      padding: 60px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(108, 92, 231, 0.2);
+      border: 1px solid rgba(108, 92, 231, 0.4);
+      border-radius: 30px;
+      color: var(--primary-light);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: #a0aec0;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 24px;
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary-light);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container position-relative">
+      <div class="hero-badge">
+        <i class="bi bi-patch-check-fill"></i> Enterprise Multi-Tenant Architecture
+      </div>
+      <h1 class="hero-title">Manage Multi-Location Gyms with <span>FitHub OS</span></h1>
+      <p class="hero-desc">
+        A client-side multi-gym management SaaS platform with category-based architecture, normalized LocalStorage engine, role-based access control, and dynamic multi-currency conversion.
+      </p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="login.html" class="btn btn-primary btn-lg px-4 py-3 fw-semibold">
+          <i class="bi bi-box-arrow-in-right me-2"></i>Launch Workspace Login
+        </a>
+        <button onclick="quickLaunch('super_admin')" class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold">
+          <i class="bi bi-lightning-charge me-2"></i>Quick Demo (Super Admin)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Highlights -->
+  <section class="py-5" style="background: var(--body-bg)">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-2">Enterprise SaaS Capabilities</h2>
+        <p class="text-muted">Explore the modularized category architecture and client-side feature set</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon bg-primary bg-opacity-10 text-primary"><i class="bi bi-diagram-3"></i></div>
+            <h5 class="fw-bold mb-2">Category Folder Architecture</h5>
+            <p class="text-muted small mb-0">Clean separation across Organization, People, Memberships, Finance, Operations, Fitness, CRM, Analytics, and Security.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon bg-success bg-opacity-10 text-success"><i class="bi bi-cash-stack"></i></div>
+            <h5 class="fw-bold mb-2">Multi-Currency Engine</h5>
+            <p class="text-muted small mb-0">Toggle between ₹ INR, $ USD, € EUR, and £ GBP with automated exchange rate conversion across tables, KPI cards, and charts.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon bg-info bg-opacity-10 text-info"><i class="bi bi-buildings"></i></div>
+            <h5 class="fw-bold mb-2">Multi-Tenancy Isolation</h5>
+            <p class="text-muted small mb-0">Centralized platform overseeing independent Gym Networks, Physical Branches, and scoped access for Staff, Trainers, and Members.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon bg-warning bg-opacity-10 text-warning"><i class="bi bi-database"></i></div>
+            <h5 class="fw-bold mb-2">LocalStorage CRUD Engine</h5>
+            <p class="text-muted small mb-0">Over 500 preloaded seed records across 26 collections with full create, read, update, delete, search, filter, and CSV export.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon bg-danger bg-opacity-10 text-danger"><i class="bi bi-shield-lock"></i></div>
+            <h5 class="fw-bold mb-2">Role-Based Access Control</h5>
+            <p class="text-muted small mb-0">6 distinct privilege levels with fine-grained action matrices and instant 1-click role simulation from any page.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon bg-secondary bg-opacity-10 text-secondary"><i class="bi bi-phone"></i></div>
+            <h5 class="fw-bold mb-2">100% Client-Side & Responsive</h5>
+            <p class="text-muted small mb-0">Runs instantly by opening HTML files in any browser with smooth touch-friendly mobile navigation across 320px to 1440px+.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Launch Buttons -->
+      <div class="card mt-5 border-0 shadow-sm p-4 text-center">
+        <h4 class="fw-bold mb-2">Ready to explore?</h4>
+        <p class="text-muted mb-4">Select a persona to immediately experience FitHub OS in your browser:</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <button class="btn btn-outline-primary" onclick="quickLaunch('super_admin')"><i class="bi bi-shield-check me-1"></i>Super Admin</button>
+          <button class="btn btn-outline-success" onclick="quickLaunch('gym_owner')"><i class="bi bi-briefcase me-1"></i>Gym Owner</button>
+          <button class="btn btn-outline-info" onclick="quickLaunch('branch_manager')"><i class="bi bi-building me-1"></i>Branch Manager</button>
+          <button class="btn btn-outline-warning" onclick="quickLaunch('trainer')"><i class="bi bi-person-badge me-1"></i>Trainer</button>
+          <button class="btn btn-outline-secondary" onclick="quickLaunch('staff')"><i class="bi bi-headset me-1"></i>Staff</button>
+          <button class="btn btn-outline-danger" onclick="quickLaunch('member')"><i class="bi bi-person me-1"></i>Member</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-muted small bg-white border-top">
+    <div class="container">
+      FitHub OS · Enterprise Multi-Gym SaaS · Built strictly with HTML5, CSS3, Vanilla ES6+ JavaScript & Bootstrap 5
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/permissions.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Auto redirect if session is already active
+    if (Auth.isLoggedIn()) {
+      window.location.href = Navigation.getUrl('dashboard');
+    }
+
+    function quickLaunch(role) {
+      Auth.loginAs(role);
+      window.location.href = Navigation.getUrl('dashboard');
+    }
+  </script>
+</body>
+</html>
