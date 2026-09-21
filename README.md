@@ -1,5 +1,7 @@
 # FitHub OS — Multi-Gym Management SaaS
 
+## Live Server :- https://darshil158.github.io/Fithub-OS/ 
+
 **FitHub OS** is a production-style, multi-tenant Gym Management SaaS application engineered exclusively with **HTML5**, **CSS3**, **Vanilla JavaScript (ES6+)**, and **Bootstrap 5**. All application data is persistently stored and managed client-side using a normalized **LocalStorage CRUD Engine** (500+ realistic records across 26 collections).
 
 The application runs directly in any modern web browser simply by opening `index.html` or `login.html` — with **zero backend dependencies, zero build steps, and zero database servers**.
